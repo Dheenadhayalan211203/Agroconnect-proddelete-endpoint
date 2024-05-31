@@ -9,10 +9,10 @@ const PORT = 3000;
 require("dotenv").config();
 
 
-const MONGODB_URI="mongodb+srv://Dheena:dheena@cluster0.ser6ewc.mongodb.net/Agroconnect?retryWrites=true&w=majority&appName=Cluster0"
+ 
 
 // Connect to MongoDB
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
